@@ -115,8 +115,8 @@ module Blueprint
           css_output += "\n"
         end
 
-        css_output = append_custom_css(css_output, output_file_name)
         css_output = append_plugin_css(css_output, output_file_name)
+        css_output = append_custom_css(css_output, output_file_name)
 
         File.string_to_file(css_output.rstrip, css_output_path)
       end
@@ -135,12 +135,13 @@ module Blueprint
       return css unless self.custom_path and self.custom_css[current_file_name]
 
       self.custom_css[current_file_name].each do |custom_css|
-        overwrite_path = File.join(destination_path, (custom_css || "my-#{current_file_name}"))
+        overwrite_base = custom_css || "my-#{current_file_name}"
+        overwrite_path = File.join(destination_path, overwrite_base)
         overwrite_css = File.exists?(overwrite_path) ? File.path_to_string(overwrite_path) : ""
 
         unless overwrite_css.blank?
           puts "      + custom styles (#{custom_css})\n"
-          css += "/* #{overwrite_path} */\n"
+          css += "/* #{overwrite_base} */\n"
           css += CSSParser.new(overwrite_css).to_s + "\n"
         end
       end
