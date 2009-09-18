@@ -1,0 +1,26 @@
+# refer to http://www.yaml.org/spec/1.1/ for clarification on YAML collections
+romey:
+  path: /Users/andy/dev/personal/romey/public/stylesheets/blueprint
+  namespace: 
+  custom_css:
+    ie.css:
+    print.css:
+    screen.css:
+  custom_layout:
+    column_count: 30
+    column_width: 30
+    gutter_width: 3
+  plugins:
+
+website:
+  path: /Users/andy/dev/personal/shenie.github.com/css
+  namespace: 
+  custom_css:
+    ie.css:
+    print.css:
+    screen.css:
+  custom_layout:
+    column_count: 24 
+    column_width: 30
+    gutter_width: 10
+  plugins:
