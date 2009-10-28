@@ -1,6 +1,6 @@
 # refer to http://www.yaml.org/spec/1.1/ for clarification on YAML collections
 romey:
-  path: /Users/andy/dev/personal/romey/public/stylesheets/blueprint
+  path: /Users/andy/dev/p/romey/public/stylesheets/blueprint
   namespace: 
   custom_css:
     ie.css:
@@ -13,7 +13,7 @@ romey:
   plugins:
 
 website:
-  path: /Users/andy/dev/personal/shenie.github.com/css
+  path: /Users/andy/dev/p/shenie.github.com/css
   namespace: 
   custom_css:
     ie.css:
